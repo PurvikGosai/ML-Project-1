@@ -2,10 +2,19 @@ import os
 import time
 
 while True:
-    os.system("git add .")
-    os.system('git commit -m "Auto update"')
-    os.system("git push origin main")
+    # Check if there are changes
+    status = os.popen("git status --porcelain").read().strip()
 
-    print("Changes pushed.")
-    
-    time.sleep(300)  # every 5 minutes
+    if status:
+        print("Changes detected...")
+
+        os.system("git add .")
+        os.system('git commit -m "Auto update"')
+        os.system("git push origin main")
+
+        print("Changes pushed successfully.")
+
+    else:
+        print("No changes detected.")
+
+    time.sleep(300)   # checks every 5 minutes
