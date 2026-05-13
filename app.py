@@ -145,7 +145,7 @@ with tab3:
         else:
             input_data.to_csv(file_path ,index=False)
     if st.button("Save Data"):
-        save_data(input_data.copy(), prob_log)
+        save_data(input_data.copy(), prob_log) ##timepass
         st.success("Data saved successfully!")
 
     
