@@ -20,6 +20,8 @@ def generate_pdf(prob_log,input_data):
 
         doc.build(content)
         return "report.pdf"
+
+
 def show_downloads(prob_log,input_data):
     if st.button("Download Report"):
         pdf_file=generate_pdf(prob_log, input_data)
