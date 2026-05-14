@@ -148,6 +148,8 @@ with tab3:
         save_data(input_data.copy(), prob_log) ##timepass
         st.success("Data saved successfully!")
 
-    if os.path.e
+    if os.path.exists("Data/client_history.csv"):
+        st.subheader("past prediction history")
+        history = pd.read_csv()
 
     
