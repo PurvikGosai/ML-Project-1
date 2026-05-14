@@ -1,6 +1,11 @@
+import streamlit as st
+import plotly.graph_objects as go
+import plotly.express as px
+import pandas as pd
+import pickle
 
 def show_analytics(df)
-st.subheader("Similar Startup")
+    st.subheader("Similar Startup")
     knn_model = pickle.load(open("Model/knn_model.pkl", "rb"))
     df = pd.read_csv("Data/startup_dataset.csv")
     distances, indices = knn_model.kneighbors(input_data)
