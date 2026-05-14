@@ -13,6 +13,10 @@ from Tabs.downloads_tab import show_downloads
 st.set_page_config(layout="wide")
 st.markdown("<h1 style='text-align:center; white-space:nowrap;'>Startup Success Predictor App </h1>",unsafe_allow_html=True)
 
+def load_model():
+    log_model = pickle.load(open("Model/logistic_model.pkl","rb"))
+    
+
 st.sidebar.header("Startup Parameters")
 
 experience = st.sidebar.slider("Founder Experience", 0, 25, 5)
@@ -47,8 +51,6 @@ input_data = pd.DataFrame([{
 # print("market :",input_data[0][3])
 
 
-
-log_model = pickle.load(open("Model/logistic_model.pkl","rb"))
 
 prob_log = log_model.predict_proba(input_data)[0][1]
 print("Team size ",input_data["TeamSize"][0])
