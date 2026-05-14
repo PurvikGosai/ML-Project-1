@@ -4,7 +4,7 @@ import plotly.express as px
 import pandas as pd
 import pickle
 
-def show_analytics(df)
+def show_analytics(df,knn_model,input_data):
     st.subheader("Similar Startup")
     knn_model = pickle.load(open("Model/knn_model.pkl", "rb"))
     df = pd.read_csv("Data/startup_dataset.csv")

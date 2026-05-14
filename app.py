@@ -1,18 +1,11 @@
 ## THIS FILE WILL BE OUR ACTUAL FRONTEND
 
 import streamlit as st
-import numpy as np
 import pandas as pd
 import pickle
 
-## GUAGE CHART
-import plotly.graph_objects as go
-import plotly.express as px
-
-from reportlab.platypus import SimpleDocTemplate, Paragraph
-from reportlab.lib.styles import getSampleStyleSheet
-
-import os
+from Tabs.prediction_tab.py import show_prediction
+from 
 
 # st.title("Startup Success Predictor APP -By Comact")
 
