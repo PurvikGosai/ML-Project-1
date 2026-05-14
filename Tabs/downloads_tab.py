@@ -1,4 +1,8 @@
-
+import streamlit as st
+import pandas as pd
+import os
+from reportlab.platypus import SimpleDocTemplate, Paragraph
+from reportlab.lib.styles import getSampleStyleSheet
 
 st.subheader("Download Your Report here...")
 def generate_pdf(prob_log,input_data):
