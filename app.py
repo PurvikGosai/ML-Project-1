@@ -22,6 +22,7 @@ log_model,knn_model = load_model()
 
 def load_data():
     return pd.read_csv("Data/startup_dataset.csv")
+df = load_data()
 
 st.sidebar.header("Startup Parameters")
 
