@@ -66,6 +66,7 @@ print("Team size ",input_data["TeamSize"][0])
 tab1, tab2, tab3 = st.tabs(["Prediction","Analytics","Downloads"])
 
 with tab1:
+
 with tab2:
     st.subheader("Similar Startup")
     knn_model = pickle.load(open("Model/knn_model.pkl", "rb"))
