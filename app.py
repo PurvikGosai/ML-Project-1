@@ -150,6 +150,7 @@ with tab3:
 
     if os.path.exists("Data/client_history.csv"):
         st.subheader("past prediction history")
-        history = pd.read_csv()
+        history = pd.read_csv("Data/client_history.csv")
+        st.dataframe(history.tall(10))
 
     
