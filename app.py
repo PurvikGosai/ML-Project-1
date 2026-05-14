@@ -15,7 +15,13 @@ st.markdown("<h1 style='text-align:center; white-space:nowrap;'>Startup Success 
 
 def load_model():
     log_model = pickle.load(open("Model/logistic_model.pkl","rb"))
-    
+    log_model = pickle.load(open("Model/knn_model.pkl","rb"))
+    return log_model,knn_model
+
+log_model,knn_model = load_model()
+
+def load_data():
+    return pd.read_csv("Data/startup_dataset.csv")
 
 st.sidebar.header("Startup Parameters")
 
