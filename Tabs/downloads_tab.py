@@ -1,7 +1,7 @@
-def show_downloads
+
 
 st.subheader("Download Your Report here...")
-    def generate_pdf(prob_log,input_data):
+def generate_pdf(prob_log,input_data):
         doc = SimpleDocTemplate("report.pdf")
         styles = getSampleStyleSheet()
 
@@ -16,7 +16,7 @@ st.subheader("Download Your Report here...")
 
         doc.build(content)
         return "report.pdf"
-    
+def show_downloads(prob_log,input_data):
     if st.button("Download Report"):
         pdf_file=generate_pdf(prob_log, input_data)
         with open(pdf_file, "rb") as f:
