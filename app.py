@@ -46,6 +46,8 @@ input_data = pd.DataFrame([{
 # print("Funding :",input_data[0][2])
 # print("market :",input_data[0][3])
 
+
+
 log_model = pickle.load(open("Model/logistic_model.pkl","rb"))
 
 prob_log = log_model.predict_proba(input_data)[0][1]
@@ -61,9 +63,15 @@ tab1, tab2, tab3 = st.tabs(["Prediction","Analytics","Downloads"])
 
 with tab1:
     show_prediction(prob_log,log_model,
-                    )
-with tab2:
+        [experience, team , funding, market,
+         innovation, marketing, competition])
     
+
+with tab2:
+    show_analytics(df, knn_model, input_data)
+
+
 with tab3:
+    show_downloads(prob_log,input_data)
     
     
