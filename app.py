@@ -4,8 +4,9 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-from Tabs.prediction_tab.py import show_prediction
-from 
+from Tabs.prediction_tab import show_prediction
+from Tabs.analytic_tab import show_analytics
+from Tabs.downloads_tab import show_downloads
 
 # st.title("Startup Success Predictor APP -By Comact")
 
@@ -59,7 +60,8 @@ print("Team size ",input_data["TeamSize"][0])
 tab1, tab2, tab3 = st.tabs(["Prediction","Analytics","Downloads"])
 
 with tab1:
-
+    show_prediction(prob_log,log_model,
+                    )
 with tab2:
     
 with tab3:
