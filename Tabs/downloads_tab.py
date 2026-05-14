@@ -36,7 +36,7 @@ def show_downloads(prob_log,input_data):
         input_data["Prediction"] = prob_log
         BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-        file_path = os.path(BASE_DIR)
+        file_path = os.path(BASE_DIR,"Data", "client_history.csv")
 
 
         if os.path.exists(file_path):
